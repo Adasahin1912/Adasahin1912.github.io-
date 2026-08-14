@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Ada Şahin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-name">Ada Şahin</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="studies.html">Studies</a></li>
+      <li><a href="honors.html">Honors</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Publications</div>
+      <h1>Selected Publications</h1>
+      <p>Bu bölüm henüz doldurulmadı. Yayının olduğunda aşağıdaki kart yapısını çoğaltarak ekleyebilirsin.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <article class="pub reveal">
+        <div class="pub-row">
+          <div class="pub-index">[1]</div>
+          <div>
+            <h3 class="pub-title">[Makale Başlığı Buraya]</h3>
+            <div class="pub-meta">[Yazar 1], [Yazar 2], <strong>Ada Şahin</strong> — <span class="pub-venue">[Konferans / Dergi Adı]</span>, [Yıl]</div>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+              <a href="#">Code</a>
+              <button type="button" onclick="toggleBib(this)">BibTeX</button>
+            </div>
+            <div class="bibtex">
+              <button class="copy" type="button" onclick="copyBib(this)">Copy</button>
+              <span class="bib-text">@inproceedings{sahin2026baslik,
+  title     = {[Makale Başlığı]},
+  author    = {Şahin, Ada},
+  booktitle = {[Konferans Adı]},
+  year      = {2026}
+}</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-note">
+    <span>© 2026 Ada Şahin. All rights reserved.</span>
+    <span>This site is hosted on GitHub Pages.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
