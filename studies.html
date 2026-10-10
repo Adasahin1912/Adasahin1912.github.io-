@@ -6,9 +6,8 @@
 <title>Studies — Ada Şahin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="studies.css">
-<script>document.documentElement.classList.add('js');</script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -35,8 +34,7 @@
       <h1>Coursework &amp; Certifications</h1>
     </div>
   </div>
-
-  <section>
+  <section style="padding-bottom:24px;">
     <div class="wrap">
       <div class="section-head reveal">
         <h2>Courses</h2>
@@ -44,59 +42,58 @@
       <div class="reveal">
         <div class="course">
           <span class="course-code">BTK</span>
-          <span class="course-title">Machine Learning Algorithms with Python</span>
+          <span>Machine Learning Algorithms with Python</span>
           <span class="course-term">Spring 2026</span>
         </div>
         <div class="course">
           <span class="course-code">BTK</span>
-          <span class="course-title">Advanced Python Programming</span>
+          <span>Advanced Python Programming</span>
           <span class="course-term">Spring 2026</span>
         </div>
         <div class="course">
           <span class="course-code">BTK</span>
-          <span class="course-title">PyTorch Applications (Advanced Level)</span>
-          <span class="course-term">Fall 2026</span>
+          <span>PyTorch Applications (Advanced Level)</span>
+          <span class="course-term">2026</span>
         </div>
         <div class="course">
           <span class="course-code">BTK</span>
-          <span class="course-title">Arduino with Projects (Advanced Level)</span>
+          <span>Arduino with Projects (Advanced Level)</span>
           <span class="course-term">Fall 2026</span>
         </div>
         <div class="course">
           <span class="course-code">Stanford Online</span>
-          <span class="course-title">CS 230: Deep Learning</span>
+          <span>CS 230: Deep Learning</span>
           <span class="course-term">Fall 2026</span>
         </div>
         <div class="course">
           <span class="course-code">Stanford Online</span>
-          <span class="course-title">CS 231N: Deep Learning for Computer Vision</span>
+          <span>CS 231N: Deep Learning for Computer Vision</span>
           <span class="course-term">Fall 2026</span>
         </div>
         <div class="course">
           <span class="course-code">IAEA</span>
-          <span class="course-title">Categorization of Nuclear Material</span>
+          <span>Categorization of Nuclear Material</span>
           <span class="course-term">Spring 2026</span>
         </div>
         <div class="course">
           <span class="course-code">DeepLearning.AI</span>
-          <span class="course-title">Deep Learning Specialization</span>
+          <span>Deep Learning Specialization</span>
           <span class="course-term">Spring 2026</span>
         </div>
         <div class="course">
           <span class="course-code">DeepLearning.AI</span>
-          <span class="course-title">Machine Learning Specialization</span>
+          <span>Machine Learning Specialization</span>
           <span class="course-term">Spring 2026</span>
         </div>
       </div>
     </div>
   </section>
-
-  <section>
+  <section style="padding-top:0;">
     <div class="wrap">
-      <div class="eyebrow reveal">Certifications</div>
-      <div class="cert-grid reveal">
+      <div class="eyebrow">Certifications</div>
+      <div class="cert-grid">
         <div class="cert-card">
-          <div class="cert-badge" aria-hidden="true">✓</div>
+          <div class="cert-badge">✓</div>
           <div>
             <h4>Machine Learning Algorithms with Python</h4>
             <div class="cert-meta">BTK Akademi · August 2026</div>
@@ -104,7 +101,7 @@
           </div>
         </div>
         <div class="cert-card">
-          <div class="cert-badge" aria-hidden="true">✓</div>
+          <div class="cert-badge">✓</div>
           <div>
             <h4>Categorization of Nuclear Material</h4>
             <div class="cert-meta">IAEA · 2026</div>
@@ -123,30 +120,6 @@
   </div>
 </footer>
 
-<script>
-  // Mobile menu
-  var toggle = document.getElementById('navToggle');
-  var links = document.getElementById('navLinks');
-  toggle.addEventListener('click', function () {
-    var open = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-
-  // Scroll reveal
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add('visible'); });
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
