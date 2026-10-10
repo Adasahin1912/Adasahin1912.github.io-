@@ -8,6 +8,63 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Honors table layout: date | competition | result (this page only) */
+  .h-head,
+  ul.honors li {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr) minmax(0, 0.9fr);
+    column-gap: 24px;
+    align-items: baseline;
+  }
+
+  .h-head {
+    padding: 0 0 10px;
+    border-bottom: 2px solid var(--line, #e4e0d6);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted, #6b6860);
+  }
+
+  ul.honors {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.honors li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line, #e4e0d6);
+  }
+
+  ul.honors .h-date {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.82rem;
+    color: var(--accent, #1f5c4d);
+    white-space: nowrap;
+  }
+
+  ul.honors .h-name {
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+
+  ul.honors .h-result {
+    color: var(--muted, #6b6860);
+    font-size: 0.92rem;
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 720px) {
+    .h-head { display: none; }
+    ul.honors li {
+      grid-template-columns: 1fr;
+      row-gap: 2px;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -37,14 +94,47 @@
 
   <section>
     <div class="wrap">
+      <div class="h-head" aria-hidden="true">
+        <span>Date</span>
+        <span>Competition</span>
+        <span>Result</span>
+      </div>
       <ul class="honors reveal">
-        <li><span class="yr">2015 – Present</span> Licensed Competitive Swimmer<span> Turkish Swimming Federation (TYF)</span></li>
-        <li><span class="yr">2015</span> Ministry of National Education Inter-School Provincial Swimming Championship <span> 14 April 2015</span></li>
-        <li><span class="yr">2015</span> Amateur Sports Week Kayseri Provincial Swimming Championship <span> 17–18 October 2015</span></li>
-        <li><span class="yr">2015</span> Bronze Medal, 50 m Backstroke (Minikler)<span> Kayseri</span></li>
-        <li><span class="yr">2018 – 2020</span> Competitive Swimmer, Bergama Belediye Spor Kulübü <span> Club swimming</span></li>
-        <li><span class="yr">2019</span> İzmir Provincial Swimming Competition <span> 1st in heat and 40th overall in the 50 m and 100 m freestyle</span></li>
-        <li><span class="yr">Present</span> Individual Competitive Swimming <span> Butterfly</span></li>
+        <li>
+          <span class="h-date">2015</span>
+          <span class="h-name">Ministry of National Education Inter-School Provincial Swimming Championship </span>
+          <span class="h-result">Participant</span>
+        </li>
+        <li>
+          <span class="h-date">2015</span>
+          <span class="h-name">Amateur Sports Week Kayseri Provincial Swimming Championship</span>
+          <span class="h-result">Participant</span>
+        </li>
+        <li>
+          <span class="h-date">2015</span>
+          <span class="h-name">Kayseri Provincial Swimming Competition </span>
+          <span class="h-result">Bronze Medal, 50 m Backstroke</span>
+        </li>
+        <li>
+          <span class="h-date">2016 – Present</span>
+          <span class="h-name">Turkish Swimming Federation (TYF)</span>
+          <span class="h-result">Licensed Competitive Swimmer</span>
+        </li>
+        <li>
+          <span class="h-date">2018 – 2020</span>
+          <span class="h-name">Bergama Belediye Spor Kulübü</span>
+          <span class="h-result">Competitive Swimmer</span>
+        </li>
+        <li>
+          <span class="h-date">2019</span>
+          <span class="h-name">İzmir Provincial Swimming Competition</span>
+          <span class="h-result">1st in heat, 40th overall (50 m and 100 m Freestyle)</span>
+        </li>
+        <li>
+          <span class="h-date">Present</span>
+          <span class="h-name">Individual Competitive Swimming</span>
+          <span class="h-result">Butterfly</span>
+        </li>
       </ul>
       <p class="empty-note"></p>
     </div>
